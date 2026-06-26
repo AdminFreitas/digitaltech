@@ -76,7 +76,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   head: () => ({
     meta: [
       { charSet: "utf-8" },
-      { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "DIGITALTECH — Tecnologia em um Minuto" },
       { name: "description", content: "Portal brasileiro de tecnologia. IA, programação, banco de dados, cibersegurança e as notícias que importam." },
