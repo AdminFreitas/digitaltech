@@ -226,9 +226,11 @@ function Header() {
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Link to="/" className="flex items-center gap-2.5">
-          <img src={logo} alt="" width={28} height={28} className="opacity-95" />
-          <span className="font-display text-sm font-bold tracking-[0.18em] text-[var(--text-primary)]">
-            DIGITALTECH
+          <span
+            className="text-[1.05rem] font-bold tracking-[-0.02em] text-[var(--text-primary)]"
+            style={{ fontFamily: '"Space Grotesk", sans-serif' }}
+          >
+            digitaltech<span className="text-[#00D4FF]">.</span>
           </span>
         </Link>
         <nav aria-label="Principal" className="hidden md:block">
@@ -311,18 +313,14 @@ function Hero() {
       />
       <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-6 md:grid-cols-[1.2fr_1fr]">
         <div className="fade-up">
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[var(--glass-border)] bg-white/[0.02] px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-[var(--text-secondary)]">
-            <span className="h-1.5 w-1.5 rounded-full bg-[var(--primary-cyan)] shadow-[0_0_12px_var(--primary-cyan)]" />
-            Edição de junho · 2026
-          </div>
-          <h1 className="font-display text-[clamp(1.9rem,4vw,2.6rem)] font-bold leading-[1.15] text-[var(--text-primary)]">
-            Sinal sobre tecnologia,
-            <br />
-            <span className="text-[color:var(--primary-cyan)]">não ruído.</span>
+          <h1 className="font-display text-[clamp(2.6rem,7vw,5rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[var(--text-primary)]">
+            DIGITALTECH
           </h1>
-          <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-[var(--text-secondary)]">
-            Análises, tutoriais e bastidores de IA, engenharia, dados e segurança —
-            escritos por quem usa, para quem constrói.
+          <h2 className="mt-2 font-display text-[clamp(1.1rem,2.5vw,1.6rem)] font-semibold text-[#3DDC97]">
+            Tecnologia em um Minuto
+          </h2>
+          <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-[var(--text-secondary)]">
+            IA, programação, inovação, ferramentas e as notícias que realmente importam.
           </p>
           <SafeSearch />
           <div className="mt-7 flex flex-wrap items-center gap-5 text-[13px] text-[var(--text-secondary)]">
@@ -610,18 +608,56 @@ function CookieBanner() {
 
 function Footer() {
   return (
-    <footer className="border-t border-[var(--glass-border)]">
-      <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-6 py-10 text-[13px] text-[var(--text-secondary)] md:flex-row md:items-center">
-        <div className="flex items-center gap-2.5">
-          <img src={logo} alt="" width={22} height={22} className="opacity-85" />
-          <span className="font-display tracking-[0.18em] text-[var(--text-primary)]">DIGITALTECH</span>
+    <footer className="site-footer border-t border-[var(--glass-border)]">
+      <div className="footer-inner mx-auto flex max-w-6xl flex-col gap-8 px-6 py-10 md:flex-row md:items-start md:justify-between">
+        <div className="footer-brand">
+          <div className="footer-logo flex flex-col">
+            <span className="logo-mark font-display text-[15px] font-bold tracking-[0.18em] text-[var(--text-primary)]">
+              DIGITALTECH
+            </span>
+            <span className="logo-tagline mt-1 text-[13px] text-[color:var(--secondary-jade)]">
+              Tecnologia em um Minuto
+            </span>
+          </div>
         </div>
-        <p>© 2026 Michel Freitas. Conteúdo independente.</p>
-        <div className="flex items-center gap-5">
-          <Link to="/contato" className="transition-colors hover:text-[var(--text-primary)]">Contato</Link>
-          <Link to="/politica-de-privacidade" className="transition-colors hover:text-[var(--text-primary)]">Privacidade</Link>
-          <a href="#" className="transition-colors hover:text-[var(--text-primary)]">RSS</a>
+        <div className="footer-links">
+          <ul className="flex flex-wrap gap-x-6 gap-y-2 text-[13px] text-[var(--text-secondary)]">
+            <li>
+              <a href="#" className="transition-colors hover:text-[var(--text-primary)]">Sobre</a>
+            </li>
+            <li>
+              <Link to="/contato" className="transition-colors hover:text-[var(--text-primary)]">Contato</Link>
+            </li>
+            <li>
+              <Link to="/politica-de-privacidade" className="transition-colors hover:text-[var(--text-primary)]">Política de Privacidade</Link>
+            </li>
+            <li>
+              <a href="#" className="transition-colors hover:text-[var(--text-primary)]">Termos de Uso</a>
+            </li>
+          </ul>
         </div>
+        <div className="footer-social">
+          <ul className="flex flex-col gap-2 text-[13px] text-[var(--text-secondary)]">
+            <li>
+              <a href="https://github.com/michel-freitas" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[var(--text-primary)]">
+                GitHub — Michel Freitas Dev
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/michel-freitas-dev" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[var(--text-primary)]">
+                LinkedIn — Michel Freitas Dev
+              </a>
+            </li>
+            <li>
+              <a href="https://tiktok.com/@digitaltech00" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[var(--text-primary)]">
+                TikTok — DigitalTech
+              </a>
+            </li>
+          </ul>
+        </div>
+        <p className="footer-copy text-[13px] text-[var(--text-secondary)]">
+          © 2026 Michel Freitas. Todos os direitos reservados.
+        </p>
       </div>
     </footer>
   );
