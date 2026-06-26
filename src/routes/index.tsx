@@ -338,11 +338,12 @@ function Hero() {
             style={{ background: "radial-gradient(closest-side, rgba(0,212,255,0.22), transparent 70%)" }}
           />
           <img
-            src={planet}
-            alt=""
+            id="planet"
+            src={planet.url}
+            alt="Planeta Terra representando tecnologia global"
             width={420}
             height={420}
-            className="relative mx-auto planet-spin-once opacity-95"
+            className="planet-img relative mx-auto planet-spin-once opacity-95"
           />
         </div>
       </div>
