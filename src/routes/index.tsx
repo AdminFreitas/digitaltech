@@ -146,7 +146,7 @@ function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <a href="/" className="flex items-center gap-2.5">
           <img src={logo} alt="" width={28} height={28} className="opacity-90" />
-          <span className="font-display text-sm font-700 tracking-[0.18em] text-[var(--ink)]">
+          <span className="font-display text-sm font-bold tracking-[0.18em] text-[var(--ink)]">
             DIGITALTECH
           </span>
         </a>
@@ -192,7 +192,7 @@ function Hero() {
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--blue)] shadow-[0_0_12px_var(--blue)]" />
             Edição de junho · 2026
           </div>
-          <h1 className="font-display text-[clamp(1.9rem,4vw,2.6rem)] font-700 leading-[1.15] text-[var(--ink)]">
+          <h1 className="font-display text-[clamp(1.9rem,4vw,2.6rem)] font-bold leading-[1.15] text-[var(--ink)]">
             Sinal sobre tecnologia,
             <br />
             <span className="text-[color:var(--blue-soft)]">não ruído.</span>
@@ -253,7 +253,7 @@ function ArticleCard({ a, large = false }: { a: Article; large?: boolean }) {
         </div>
         <div className="p-5 md:p-6">
           <h3
-            className={`font-display font-600 text-[var(--ink)] transition-colors duration-300 group-hover:text-[color:var(--blue-soft)] ${large ? "text-xl md:text-2xl leading-snug" : "text-[17px] leading-snug"}`}
+            className={`font-display font-semibold text-[var(--ink)] transition-colors duration-300 group-hover:text-[color:var(--blue-soft)] ${large ? "text-xl md:text-2xl leading-snug" : "text-[17px] leading-snug"}`}
           >
             {a.title}
           </h3>
@@ -281,7 +281,7 @@ function Articles() {
           <div className="text-[11px] uppercase tracking-[0.22em] text-[var(--ink-dim)]">
             Em destaque
           </div>
-          <h2 className="mt-2 font-display text-xl font-600 text-[var(--ink)] md:text-2xl">
+          <h2 className="mt-2 font-display text-xl font-semibold text-[var(--ink)] md:text-2xl">
             O que ler primeiro nesta semana
           </h2>
         </div>
@@ -304,7 +304,7 @@ function Articles() {
           <div className="text-[11px] uppercase tracking-[0.22em] text-[var(--ink-dim)]">
             Recentes
           </div>
-          <h2 className="mt-2 font-display text-xl font-600 text-[var(--ink)] md:text-2xl">
+          <h2 className="mt-2 font-display text-xl font-semibold text-[var(--ink)] md:text-2xl">
             Atualizações da semana
           </h2>
         </div>
