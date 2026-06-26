@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type MouseEvent } from "react";
 import logo from "@/assets/logo-robot.png";
-import planet from "@/assets/planet.webp";
+import planet from "@/assets/planet.svg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
