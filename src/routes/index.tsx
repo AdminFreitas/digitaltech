@@ -305,7 +305,7 @@ function Hero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-20">
+    <section className="hero relative overflow-hidden">
       <div
         aria-hidden
         className="pointer-events-none absolute -top-32 left-1/2 h-[520px] w-[920px] -translate-x-1/2 rounded-full opacity-40 blur-3xl"
@@ -343,7 +343,7 @@ function Hero() {
             alt="Planeta Terra representando tecnologia global"
             width={420}
             height={420}
-            className="planet-img relative mx-auto planet-spin-once opacity-95"
+            className="planet-img relative mx-auto opacity-95"
           />
         </div>
       </div>
