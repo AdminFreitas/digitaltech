@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type MouseEvent } from "react";
 import logo from "@/assets/logo-robot.png";
-import planet from "@/assets/planet.webp";
+import planet from "@/assets/planet.svg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -338,11 +338,12 @@ function Hero() {
             style={{ background: "radial-gradient(closest-side, rgba(0,212,255,0.22), transparent 70%)" }}
           />
           <img
-            src={planet}
-            alt=""
+            id="planet"
+            src={planet.url}
+            alt="Planeta Terra representando tecnologia global"
             width={420}
             height={420}
-            className="relative mx-auto planet-spin-once opacity-95"
+            className="planet-img relative mx-auto planet-spin-once opacity-95"
           />
         </div>
       </div>
@@ -609,7 +610,7 @@ function CookieBanner() {
 function Footer() {
   return (
     <footer className="site-footer border-t border-[var(--glass-border)]">
-      <div className="footer-inner mx-auto flex max-w-6xl flex-col gap-8 px-6 py-10 md:flex-row md:items-start md:justify-between">
+      <div className="footer-inner mx-auto flex max-w-6xl flex-col gap-7 px-6 py-10">
         <div className="footer-brand">
           <div className="footer-logo flex flex-col">
             <span className="logo-mark font-display text-[15px] font-bold tracking-[0.18em] text-[var(--text-primary)]">
