@@ -172,7 +172,8 @@
 }
 
 .hero {
-  padding: clamp(1rem, 2vw, 1.75rem) 0 clamp(1rem, 2vw, 1.75rem);
+  padding-top: calc(64px + clamp(2rem, 4vw, 3rem));
+  padding-bottom: clamp(1rem, 2vw, 1.75rem);
 }
 
 .fade-in {

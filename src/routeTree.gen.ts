@@ -60,11 +60,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to: '/' | '/contato' | '/politica-de-privacidade' | '/sitemap.xml'
   id:
-    | '__root__'
-    | '/'
-    | '/contato'
-    | '/politica-de-privacidade'
-    | '/sitemap.xml'
+    '__root__' | '/' | '/contato' | '/politica-de-privacidade' | '/sitemap.xml'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
