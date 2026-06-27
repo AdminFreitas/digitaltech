@@ -86,8 +86,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "DIGITALTECH — Tecnologia em um Minuto" },
       { name: "twitter:description", content: "Portal brasileiro de tecnologia. IA, programação, banco de dados, cibersegurança e as notícias que importam." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2c61c1e1-db4d-47c0-85f9-bb493e88c063/id-preview-389ca79b--fdce8791-136e-4733-802d-dc5bc57e7d0b.lovable.app-1782466223668.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2c61c1e1-db4d-47c0-85f9-bb493e88c063/id-preview-389ca79b--fdce8791-136e-4733-802d-dc5bc57e7d0b.lovable.app-1782466223668.png" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2c61c1e1-db4d-47c0-85f9-bb493e88c063/id-preview-389ca79b--fdce8791-136e-4733-802d-dc5bc57e7d0b.digitaltech.digital-1782466223668.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2c61c1e1-db4d-47c0-85f9-bb493e88c063/id-preview-389ca79b--fdce8791-136e-4733-802d-dc5bc57e7d0b.digitaltech.digital-1782466223668.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
