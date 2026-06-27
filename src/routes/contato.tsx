@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import logo from "@/assets/logo-robot.png";
+import logo from "@/assets/logo-robot.webp";
 
 export const Route = createFileRoute("/contato")({
   head: () => ({

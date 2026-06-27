@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type MouseEvent } from "react";
-import logo from "@/assets/logo-robot.png";
-import planet from "@/assets/planet.png.asset.json";
+import logo from "@/assets/logo-robot.webp";
+import planet from "@/assets/planet.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -339,7 +339,7 @@ function Hero() {
           />
           <img
             id="planet"
-            src={planet.url}
+            src={planet}
             alt="Planeta Terra representando tecnologia global"
             width={420}
             height={420}

@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import logo from "@/assets/logo-robot.png";
+import logo from "@/assets/logo-robot.webp";
 
 export const Route = createFileRoute("/politica-de-privacidade")({
   head: () => ({
