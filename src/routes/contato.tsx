@@ -6,7 +6,10 @@ export const Route = createFileRoute("/contato")({
   head: () => ({
     meta: [
       { title: "Contato — DIGITALTECH" },
-      { name: "description", content: "Fale com a equipe do DIGITALTECH: pautas, parcerias, correções e dúvidas." },
+      {
+        name: "description",
+        content: "Fale com a equipe do DIGITALTECH: pautas, parcerias, correções e dúvidas.",
+      },
       { property: "og:title", content: "Contato — DIGITALTECH" },
       { property: "og:description", content: "Fale com a equipe do DIGITALTECH." },
       { property: "og:url", content: "/contato" },
@@ -32,16 +35,22 @@ function ContatoPage() {
             <img src={logo} alt="" width={26} height={26} />
             <span className="font-display text-sm font-bold tracking-[0.18em]">DIGITALTECH</span>
           </Link>
-          <Link to="/" className="text-[13px] text-[var(--text-secondary)] hover:text-[var(--text-primary)]">
+          <Link
+            to="/"
+            className="text-[13px] text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
+          >
             ← Início
           </Link>
         </div>
       </header>
       <main className="mx-auto max-w-2xl px-6 pt-16 pb-24">
-        <div className="text-[11px] uppercase tracking-[0.22em] text-[var(--text-secondary)]">Contato</div>
+        <div className="text-[11px] uppercase tracking-[0.22em] text-[var(--text-secondary)]">
+          Contato
+        </div>
         <h1 className="mt-2 font-display text-3xl font-bold md:text-4xl">Vamos conversar</h1>
         <p className="mt-3 text-[15px] text-[var(--text-secondary)] leading-relaxed">
-          Pautas, parcerias, correções ou só um oi — escolha o assunto certo e a gente responde em até 3 dias úteis.
+          Pautas, parcerias, correções ou só um oi — escolha o assunto certo e a gente responde em
+          até 3 dias úteis.
         </p>
 
         {sent && (
@@ -50,11 +59,7 @@ function ContatoPage() {
           </div>
         )}
 
-        <form
-          action="https://formspree.io/f/SEU_ID_AQUI"
-          method="POST"
-          className="mt-10 space-y-5"
-        >
+        <form action="https://formspree.io/f/SEU_ID_AQUI" method="POST" className="mt-10 space-y-5">
           {/* honeypot anti-spam */}
           <input
             type="text"
@@ -69,7 +74,12 @@ function ContatoPage() {
           <Field label="E-mail" name="email" type="email" maxLength={120} required />
           <Field label="Assunto" name="assunto" maxLength={120} required />
           <div>
-            <label className="mb-2 block text-[13px] text-[var(--text-secondary)]" htmlFor="mensagem">Mensagem</label>
+            <label
+              className="mb-2 block text-[13px] text-[var(--text-secondary)]"
+              htmlFor="mensagem"
+            >
+              Mensagem
+            </label>
             <textarea
               id="mensagem"
               name="mensagem"
@@ -80,7 +90,15 @@ function ContatoPage() {
             />
           </div>
 
-          <input type="hidden" name="_next" value={typeof window !== "undefined" ? `${window.location.origin}/contato?enviado=1` : "/contato?enviado=1"} />
+          <input
+            type="hidden"
+            name="_next"
+            value={
+              typeof window !== "undefined"
+                ? `${window.location.origin}/contato?enviado=1`
+                : "/contato?enviado=1"
+            }
+          />
 
           <button
             type="submit"
@@ -94,7 +112,19 @@ function ContatoPage() {
   );
 }
 
-function Field({ label, name, type = "text", maxLength, required }: { label: string; name: string; type?: string; maxLength?: number; required?: boolean }) {
+function Field({
+  label,
+  name,
+  type = "text",
+  maxLength,
+  required,
+}: {
+  label: string;
+  name: string;
+  type?: string;
+  maxLength?: number;
+  required?: boolean;
+}) {
   return (
     <div>
       <label htmlFor={name} className="mb-2 block text-[13px] text-[var(--text-secondary)]">

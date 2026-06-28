@@ -13,6 +13,10 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as FerramentasIndexRouteImport } from './routes/ferramentas/index'
+import { Route as ArtigosIndexRouteImport } from './routes/artigos/index'
+import { Route as CategoriasCategoriaRouteImport } from './routes/categorias/$categoria'
+import { Route as ArtigosSlugRouteImport } from './routes/artigos/$slug'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -34,18 +38,46 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FerramentasIndexRoute = FerramentasIndexRouteImport.update({
+  id: '/ferramentas/',
+  path: '/ferramentas/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArtigosIndexRoute = ArtigosIndexRouteImport.update({
+  id: '/artigos/',
+  path: '/artigos/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CategoriasCategoriaRoute = CategoriasCategoriaRouteImport.update({
+  id: '/categorias/$categoria',
+  path: '/categorias/$categoria',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArtigosSlugRoute = ArtigosSlugRouteImport.update({
+  id: '/artigos/$slug',
+  path: '/artigos/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contato': typeof ContatoRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/artigos/$slug': typeof ArtigosSlugRoute
+  '/categorias/$categoria': typeof CategoriasCategoriaRoute
+  '/artigos/': typeof ArtigosIndexRoute
+  '/ferramentas/': typeof FerramentasIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contato': typeof ContatoRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/artigos/$slug': typeof ArtigosSlugRoute
+  '/categorias/$categoria': typeof CategoriasCategoriaRoute
+  '/artigos': typeof ArtigosIndexRoute
+  '/ferramentas': typeof FerramentasIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,14 +85,42 @@ export interface FileRoutesById {
   '/contato': typeof ContatoRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/artigos/$slug': typeof ArtigosSlugRoute
+  '/categorias/$categoria': typeof CategoriasCategoriaRoute
+  '/artigos/': typeof ArtigosIndexRoute
+  '/ferramentas/': typeof FerramentasIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/contato' | '/politica-de-privacidade' | '/sitemap.xml'
+  fullPaths:
+    | '/'
+    | '/contato'
+    | '/politica-de-privacidade'
+    | '/sitemap.xml'
+    | '/artigos/$slug'
+    | '/categorias/$categoria'
+    | '/artigos/'
+    | '/ferramentas/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contato' | '/politica-de-privacidade' | '/sitemap.xml'
+  to:
+    | '/'
+    | '/contato'
+    | '/politica-de-privacidade'
+    | '/sitemap.xml'
+    | '/artigos/$slug'
+    | '/categorias/$categoria'
+    | '/artigos'
+    | '/ferramentas'
   id:
-    '__root__' | '/' | '/contato' | '/politica-de-privacidade' | '/sitemap.xml'
+    | '__root__'
+    | '/'
+    | '/contato'
+    | '/politica-de-privacidade'
+    | '/sitemap.xml'
+    | '/artigos/$slug'
+    | '/categorias/$categoria'
+    | '/artigos/'
+    | '/ferramentas/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -68,6 +128,10 @@ export interface RootRouteChildren {
   ContatoRoute: typeof ContatoRoute
   PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  ArtigosSlugRoute: typeof ArtigosSlugRoute
+  CategoriasCategoriaRoute: typeof CategoriasCategoriaRoute
+  ArtigosIndexRoute: typeof ArtigosIndexRoute
+  FerramentasIndexRoute: typeof FerramentasIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -100,6 +164,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ferramentas/': {
+      id: '/ferramentas/'
+      path: '/ferramentas'
+      fullPath: '/ferramentas/'
+      preLoaderRoute: typeof FerramentasIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/artigos/': {
+      id: '/artigos/'
+      path: '/artigos'
+      fullPath: '/artigos/'
+      preLoaderRoute: typeof ArtigosIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/categorias/$categoria': {
+      id: '/categorias/$categoria'
+      path: '/categorias/$categoria'
+      fullPath: '/categorias/$categoria'
+      preLoaderRoute: typeof CategoriasCategoriaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/artigos/$slug': {
+      id: '/artigos/$slug'
+      path: '/artigos/$slug'
+      fullPath: '/artigos/$slug'
+      preLoaderRoute: typeof ArtigosSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -108,6 +200,10 @@ const rootRouteChildren: RootRouteChildren = {
   ContatoRoute: ContatoRoute,
   PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  ArtigosSlugRoute: ArtigosSlugRoute,
+  CategoriasCategoriaRoute: CategoriasCategoriaRoute,
+  ArtigosIndexRoute: ArtigosIndexRoute,
+  FerramentasIndexRoute: FerramentasIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -31,7 +31,10 @@ export function Header() {
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Link to="/" className="flex items-center gap-2.5">
-          <span className="text-[1.05rem] font-bold tracking-[-0.02em] text-[var(--text-primary)]" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
+          <span
+            className="text-[1.05rem] font-bold tracking-[-0.02em] text-[var(--text-primary)]"
+            style={{ fontFamily: '"Space Grotesk", sans-serif' }}
+          >
             digitaltech<span className="text-[#00D4FF]">.</span>
           </span>
         </Link>
@@ -39,20 +42,38 @@ export function Header() {
           <ul className="flex items-center gap-8 text-[13px] text-[var(--text-secondary)]">
             {links.map((l) => (
               <li key={l.label}>
-                <a href={l.href} className="transition-colors duration-300 hover:text-[var(--text-primary)]">{l.label}</a>
+                <a
+                  href={l.href}
+                  className="transition-colors duration-300 hover:text-[var(--text-primary)]"
+                >
+                  {l.label}
+                </a>
               </li>
             ))}
             <li>
-              <Link to="/contato" className="transition-colors duration-300 hover:text-[var(--text-primary)]">Contato</Link>
+              <Link
+                to="/contato"
+                className="transition-colors duration-300 hover:text-[var(--text-primary)]"
+              >
+                Contato
+              </Link>
             </li>
           </ul>
         </nav>
         <div className="hidden md:flex items-center gap-3">
-          <a href="/#artigos" className="inline-flex items-center rounded-full border border-[var(--glass-border)] px-4 py-1.5 text-[12px] text-[var(--text-secondary)] transition-colors duration-300 hover:border-[color:var(--primary-cyan)] hover:text-[var(--text-primary)]">
+          <a
+            href="/#artigos"
+            className="inline-flex items-center rounded-full border border-[var(--glass-border)] px-4 py-1.5 text-[12px] text-[var(--text-secondary)] transition-colors duration-300 hover:border-[color:var(--primary-cyan)] hover:text-[var(--text-primary)]"
+          >
             Newsletter
           </a>
         </div>
-        <button aria-label="Abrir menu" aria-expanded={open} onClick={() => setOpen((v) => !v)} className="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-md border border-[var(--glass-border)] text-[var(--text-secondary)]">
+        <button
+          aria-label="Abrir menu"
+          aria-expanded={open}
+          onClick={() => setOpen((v) => !v)}
+          className="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-md border border-[var(--glass-border)] text-[var(--text-secondary)]"
+        >
           <span className="sr-only">Menu</span>
           <div className="space-y-1">
             <span className="block h-px w-5 bg-current" />
@@ -66,11 +87,23 @@ export function Header() {
           <ul className="mx-auto max-w-6xl px-6 py-4 space-y-3 text-[15px]">
             {links.map((l) => (
               <li key={l.label}>
-                <a onClick={() => setOpen(false)} href={l.href} className="block text-[var(--text-secondary)] hover:text-[var(--text-primary)]">{l.label}</a>
+                <a
+                  onClick={() => setOpen(false)}
+                  href={l.href}
+                  className="block text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
+                >
+                  {l.label}
+                </a>
               </li>
             ))}
             <li>
-              <Link onClick={() => setOpen(false)} to="/contato" className="block text-[var(--text-secondary)] hover:text-[var(--text-primary)]">Contato</Link>
+              <Link
+                onClick={() => setOpen(false)}
+                to="/contato"
+                className="block text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
+              >
+                Contato
+              </Link>
             </li>
           </ul>
         </div>

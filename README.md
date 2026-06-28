@@ -21,10 +21,10 @@ customizado (tokens de cor, tipografia e espaçamento próprios).
 
 ## Design System
 
-- Primária (ciano):   #00D4FF
-- Secundária (jade):  #3DDC97
-- Accent (âmbar):     #E8B86D
-- Background:         #0B1020
+- Primária (ciano): #00D4FF
+- Secundária (jade): #3DDC97
+- Accent (âmbar): #E8B86D
+- Background: #0B1020
 - Fontes: Space Grotesk, Inter, JetBrains Mono
 
 ## Como rodar localmente

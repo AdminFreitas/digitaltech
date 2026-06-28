@@ -86,39 +86,95 @@ export const Route = createFileRoute("/")({
 
 /* ------------------------------------------------------------ DATA */
 
-type Article = { category: string; title: string; excerpt: string; readTime: string; date: string; cover: string };
+type Article = {
+  category: string;
+  title: string;
+  excerpt: string;
+  readTime: string;
+  date: string;
+  cover: string;
+};
 
 const featured: Article[] = [
   {
     category: "Inteligência Artificial",
     title: "Como modelos de linguagem mudaram o desenvolvimento em 2026",
-    excerpt: "Um balanço prático sobre produtividade, riscos e o que ficou para trás depois da virada generativa.",
-    readTime: "8 min", date: "24 jun 2026",
-    cover: "radial-gradient(120% 80% at 20% 10%, #00D4FF55 0%, #0B1020 60%), linear-gradient(135deg, #0B1020, #121826)",
+    excerpt:
+      "Um balanço prático sobre produtividade, riscos e o que ficou para trás depois da virada generativa.",
+    readTime: "8 min",
+    date: "24 jun 2026",
+    cover:
+      "radial-gradient(120% 80% at 20% 10%, #00D4FF55 0%, #0B1020 60%), linear-gradient(135deg, #0B1020, #121826)",
   },
   {
     category: "Engenharia",
     title: "Padrões assíncronos que todo back-end Python deveria usar",
     excerpt: "Do asyncio cru ao TaskGroup — o que finalmente virou idiomático em 2026.",
-    readTime: "6 min", date: "22 jun 2026",
-    cover: "radial-gradient(120% 80% at 80% 20%, #3DDC9755 0%, #0B1020 55%), linear-gradient(135deg, #0B1020, #121826)",
+    readTime: "6 min",
+    date: "22 jun 2026",
+    cover:
+      "radial-gradient(120% 80% at 80% 20%, #3DDC9755 0%, #0B1020 55%), linear-gradient(135deg, #0B1020, #121826)",
   },
   {
     category: "Segurança",
     title: "OWASP Top 10: o que mudou no front-end em 2026",
     excerpt: "Os ataques do ano, com exemplos reais e mitigação aplicada — sem fórmulas mágicas.",
-    readTime: "9 min", date: "20 jun 2026",
-    cover: "radial-gradient(120% 80% at 50% 100%, #E8B86D55 0%, #0B1020 60%), linear-gradient(180deg, #0B1020, #121826)",
+    readTime: "9 min",
+    date: "20 jun 2026",
+    cover:
+      "radial-gradient(120% 80% at 50% 100%, #E8B86D55 0%, #0B1020 60%), linear-gradient(180deg, #0B1020, #121826)",
   },
 ];
 
 const recent: Article[] = [
-  { category: "Banco de Dados", title: "PostgreSQL 17: o que vale apertar o botão de upgrade", excerpt: "Recursos novos que importam na operação e os que não importam.", readTime: "4 min", date: "20 jun 2026", cover: "linear-gradient(135deg, #121826 0%, #0B1020 100%)" },
-  { category: "Carreira", title: "Saindo do júnior: as habilidades que ninguém te ensina", excerpt: "Comunicação, escopo, leitura de código alheio e dizer não.", readTime: "6 min", date: "18 jun 2026", cover: "linear-gradient(135deg, #161F30 0%, #0B1020 100%)" },
-  { category: "Cloud", title: "Workers, Edge e o fim do back-end em uma única região", excerpt: "Latência, custo e arquitetura — o que muda na prática.", readTime: "5 min", date: "15 jun 2026", cover: "linear-gradient(135deg, #121826 0%, #0B1020 100%)" },
-  { category: "Inteligência Artificial", title: "RAG na prática: arquitetura, custos e armadilhas", excerpt: "Quando vale, quando não vale, e o que ninguém conta no slide.", readTime: "7 min", date: "12 jun 2026", cover: "linear-gradient(135deg, #102046 0%, #0B1020 100%)" },
-  { category: "Web", title: "View Transitions API: animação de página sem framework", excerpt: "Como entregar transições suaves com 30 linhas de código.", readTime: "3 min", date: "10 jun 2026", cover: "linear-gradient(135deg, #121826 0%, #0B1020 100%)" },
-  { category: "Notícias", title: "O que muda no mercado de TI com a nova Lei de IA", excerpt: "Resumo objetivo do que afeta empresas, devs e contratos.", readTime: "5 min", date: "08 jun 2026", cover: "linear-gradient(135deg, #161F30 0%, #0B1020 100%)" },
+  {
+    category: "Banco de Dados",
+    title: "PostgreSQL 17: o que vale apertar o botão de upgrade",
+    excerpt: "Recursos novos que importam na operação e os que não importam.",
+    readTime: "4 min",
+    date: "20 jun 2026",
+    cover: "linear-gradient(135deg, #121826 0%, #0B1020 100%)",
+  },
+  {
+    category: "Carreira",
+    title: "Saindo do júnior: as habilidades que ninguém te ensina",
+    excerpt: "Comunicação, escopo, leitura de código alheio e dizer não.",
+    readTime: "6 min",
+    date: "18 jun 2026",
+    cover: "linear-gradient(135deg, #161F30 0%, #0B1020 100%)",
+  },
+  {
+    category: "Cloud",
+    title: "Workers, Edge e o fim do back-end em uma única região",
+    excerpt: "Latência, custo e arquitetura — o que muda na prática.",
+    readTime: "5 min",
+    date: "15 jun 2026",
+    cover: "linear-gradient(135deg, #121826 0%, #0B1020 100%)",
+  },
+  {
+    category: "Inteligência Artificial",
+    title: "RAG na prática: arquitetura, custos e armadilhas",
+    excerpt: "Quando vale, quando não vale, e o que ninguém conta no slide.",
+    readTime: "7 min",
+    date: "12 jun 2026",
+    cover: "linear-gradient(135deg, #102046 0%, #0B1020 100%)",
+  },
+  {
+    category: "Web",
+    title: "View Transitions API: animação de página sem framework",
+    excerpt: "Como entregar transições suaves com 30 linhas de código.",
+    readTime: "3 min",
+    date: "10 jun 2026",
+    cover: "linear-gradient(135deg, #121826 0%, #0B1020 100%)",
+  },
+  {
+    category: "Notícias",
+    title: "O que muda no mercado de TI com a nova Lei de IA",
+    excerpt: "Resumo objetivo do que afeta empresas, devs e contratos.",
+    readTime: "5 min",
+    date: "08 jun 2026",
+    cover: "linear-gradient(135deg, #161F30 0%, #0B1020 100%)",
+  },
 ];
 
 const tools = [
@@ -158,10 +214,22 @@ const projects = [
 ];
 
 const faq = [
-  { q: "O que é o DIGITALTECH?", a: "Um portal independente brasileiro sobre tecnologia: IA, engenharia de software, dados e cibersegurança." },
-  { q: "Quem escreve o conteúdo?", a: "Michel Freitas, com colaborações pontuais de profissionais convidados da indústria." },
-  { q: "O conteúdo é gratuito?", a: "Sim. Todo o conteúdo do blog é gratuito. A newsletter também é gratuita." },
-  { q: "Como sugerir uma pauta?", a: "Pela página de contato, com o assunto 'Pauta' e um resumo da ideia." },
+  {
+    q: "O que é o DIGITALTECH?",
+    a: "Um portal independente brasileiro sobre tecnologia: IA, engenharia de software, dados e cibersegurança.",
+  },
+  {
+    q: "Quem escreve o conteúdo?",
+    a: "Michel Freitas, com colaborações pontuais de profissionais convidados da indústria.",
+  },
+  {
+    q: "O conteúdo é gratuito?",
+    a: "Sim. Todo o conteúdo do blog é gratuito. A newsletter também é gratuita.",
+  },
+  {
+    q: "Como sugerir uma pauta?",
+    a: "Pela página de contato, com o assunto 'Pauta' e um resumo da ideia.",
+  },
 ];
 
 /* ------------------------------------------------------------ HOOKS */
@@ -187,7 +255,7 @@ function useReveal<T extends HTMLElement>() {
           obs.disconnect();
         }
       },
-      { threshold: 0.12 }
+      { threshold: 0.12 },
     );
     obs.observe(el);
     return () => obs.disconnect();
@@ -237,13 +305,19 @@ function Header() {
           <ul className="flex items-center gap-8 text-[13px] text-[var(--text-secondary)]">
             {links.map((l) => (
               <li key={l.label}>
-                <a href={l.href} className="transition-colors duration-300 hover:text-[var(--text-primary)]">
+                <a
+                  href={l.href}
+                  className="transition-colors duration-300 hover:text-[var(--text-primary)]"
+                >
                   {l.label}
                 </a>
               </li>
             ))}
             <li>
-              <Link to="/contato" className="transition-colors duration-300 hover:text-[var(--text-primary)]">
+              <Link
+                to="/contato"
+                className="transition-colors duration-300 hover:text-[var(--text-primary)]"
+              >
                 Contato
               </Link>
             </li>
@@ -276,13 +350,21 @@ function Header() {
           <ul className="mx-auto max-w-6xl px-6 py-4 space-y-3 text-[15px]">
             {links.map((l) => (
               <li key={l.label}>
-                <a onClick={() => setOpen(false)} href={l.href} className="block text-[var(--text-secondary)] hover:text-[var(--text-primary)]">
+                <a
+                  onClick={() => setOpen(false)}
+                  href={l.href}
+                  className="block text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
+                >
                   {l.label}
                 </a>
               </li>
             ))}
             <li>
-              <Link onClick={() => setOpen(false)} to="/contato" className="block text-[var(--text-secondary)] hover:text-[var(--text-primary)]">
+              <Link
+                onClick={() => setOpen(false)}
+                to="/contato"
+                className="block text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
+              >
                 Contato
               </Link>
             </li>
@@ -309,7 +391,9 @@ function Hero() {
       <div
         aria-hidden
         className="pointer-events-none absolute -top-32 left-1/2 h-[520px] w-[920px] -translate-x-1/2 rounded-full opacity-40 blur-3xl"
-        style={{ background: "radial-gradient(closest-side, rgba(0,212,255,0.28), transparent 70%)" }}
+        style={{
+          background: "radial-gradient(closest-side, rgba(0,212,255,0.28), transparent 70%)",
+        }}
       />
       <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-6 md:grid-cols-[1.2fr_1fr]">
         <div className="fade-up">
@@ -335,7 +419,9 @@ function Hero() {
           <div
             aria-hidden
             className="absolute inset-0 rounded-full opacity-60 blur-2xl"
-            style={{ background: "radial-gradient(closest-side, rgba(0,212,255,0.22), transparent 70%)" }}
+            style={{
+              background: "radial-gradient(closest-side, rgba(0,212,255,0.22), transparent 70%)",
+            }}
           />
           <img
             id="planet"
@@ -376,8 +462,17 @@ function SafeSearch() {
       }}
       className="mt-6 flex max-w-md items-center gap-2 rounded-full border border-[var(--glass-border)] bg-[rgba(22,31,48,0.5)] px-4 py-2 backdrop-blur-md"
     >
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-[var(--text-secondary)]">
-        <circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" />
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        className="text-[var(--text-secondary)]"
+      >
+        <circle cx="11" cy="11" r="7" />
+        <path d="M21 21l-4.3-4.3" />
       </svg>
       <input
         type="search"
@@ -405,7 +500,10 @@ function Tools() {
   const ref = useReveal<HTMLDivElement>();
   return (
     <section id="ferramentas" className="mx-auto max-w-6xl px-6 pb-20">
-      <SectionHeader eyebrow="Ferramentas" title="Pequenos utilitários, grandes economias de tempo" />
+      <SectionHeader
+        eyebrow="Ferramentas"
+        title="Pequenos utilitários, grandes economias de tempo"
+      />
       <div ref={ref} className="fade-in grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {tools.map((t) => (
           <div
@@ -414,12 +512,16 @@ function Tools() {
             className="hover-spot card-border rounded-2xl bg-[rgba(22,31,48,0.55)] p-5 backdrop-blur-md cursor-default"
           >
             <div className="flex items-center justify-between">
-              <h3 className="font-display text-[16px] font-semibold text-[var(--text-primary)]">{t.name}</h3>
+              <h3 className="font-display text-[16px] font-semibold text-[var(--text-primary)]">
+                {t.name}
+              </h3>
               <span className="rounded-full border border-[color:var(--accent-amber)]/40 px-2 py-0.5 text-[10px] uppercase tracking-wider text-[color:var(--accent-amber)]">
                 Em breve
               </span>
             </div>
-            <p className="mt-2 text-[13.5px] text-[var(--text-secondary)] leading-relaxed">{t.desc}</p>
+            <p className="mt-2 text-[13.5px] text-[var(--text-secondary)] leading-relaxed">
+              {t.desc}
+            </p>
           </div>
         ))}
       </div>
@@ -429,11 +531,21 @@ function Tools() {
 
 /* ------------------------------------------------------------ ARTICLES */
 
-function SectionHeader({ eyebrow, title, right }: { eyebrow: string; title: string; right?: React.ReactNode }) {
+function SectionHeader({
+  eyebrow,
+  title,
+  right,
+}: {
+  eyebrow: string;
+  title: string;
+  right?: React.ReactNode;
+}) {
   return (
     <div className="mb-10 flex items-end justify-between gap-4">
       <div>
-        <div className="text-[11px] uppercase tracking-[0.22em] text-[var(--text-secondary)]">{eyebrow}</div>
+        <div className="text-[11px] uppercase tracking-[0.22em] text-[var(--text-secondary)]">
+          {eyebrow}
+        </div>
         <h2 className="mt-2 font-display text-xl font-semibold text-[var(--text-primary)] md:text-2xl">
           {title}
         </h2>
@@ -464,11 +576,15 @@ function ArticleCard({ a, large = false }: { a: Article; large?: boolean }) {
           </span>
         </div>
         <div className="p-5 md:p-6">
-          <h3 className={`font-display font-semibold text-[var(--text-primary)] transition-colors duration-300 group-hover:text-[color:var(--primary-cyan)] ${large ? "text-xl md:text-2xl leading-snug" : "text-[17px] leading-snug"}`}>
+          <h3
+            className={`font-display font-semibold text-[var(--text-primary)] transition-colors duration-300 group-hover:text-[color:var(--primary-cyan)] ${large ? "text-xl md:text-2xl leading-snug" : "text-[17px] leading-snug"}`}
+          >
             {a.title}
           </h3>
           {large && (
-            <p className="mt-2 text-[14px] leading-relaxed text-[var(--text-secondary)]">{a.excerpt}</p>
+            <p className="mt-2 text-[14px] leading-relaxed text-[var(--text-secondary)]">
+              {a.excerpt}
+            </p>
           )}
           <div className="mt-4 flex items-center gap-3 text-[12px] text-[var(--text-secondary)]">
             <time>{a.date}</time>
@@ -490,19 +606,26 @@ function Articles() {
         eyebrow="Em destaque"
         title="O que ler primeiro nesta semana"
         right={
-          <a href="#" className="hidden text-[13px] text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)] md:inline story-link">
+          <a
+            href="#"
+            className="hidden text-[13px] text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)] md:inline story-link"
+          >
             Ver todos →
           </a>
         }
       />
       <div ref={ref1} className="fade-in grid grid-cols-1 gap-6 md:grid-cols-3">
-        {featured.map((a) => <ArticleCard key={a.title} a={a} large />)}
+        {featured.map((a) => (
+          <ArticleCard key={a.title} a={a} large />
+        ))}
       </div>
 
       <div className="mt-20">
         <SectionHeader eyebrow="Recentes" title="Atualizações da semana" />
         <div ref={ref2} className="fade-in grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {recent.map((a) => <ArticleCard key={a.title} a={a} />)}
+          {recent.map((a) => (
+            <ArticleCard key={a.title} a={a} />
+          ))}
         </div>
       </div>
     </section>
@@ -517,7 +640,9 @@ function Categories() {
     <section id="categorias" className="mx-auto max-w-6xl px-6 pb-24">
       <SectionHeader eyebrow="Categorias" title="Navegue por tema" />
       <div ref={ref} className="fade-in grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {categories.map((c) => <CategoryCard key={c.name} cat={c} />)}
+        {categories.map((c) => (
+          <CategoryCard key={c.name} cat={c} />
+        ))}
       </div>
     </section>
   );
@@ -527,13 +652,20 @@ function CategoryCard({ cat }: { cat: { name: string; sub: string[] } }) {
   const [open, setOpen] = useState(false);
   const onMove = useSpotlight();
   return (
-    <div onMouseMove={onMove} className="hover-spot card-border rounded-2xl bg-[rgba(22,31,48,0.55)] p-5 backdrop-blur-md">
-      <h3 className="font-display text-[16px] font-semibold text-[var(--text-primary)]">{cat.name}</h3>
+    <div
+      onMouseMove={onMove}
+      className="hover-spot card-border rounded-2xl bg-[rgba(22,31,48,0.55)] p-5 backdrop-blur-md"
+    >
+      <h3 className="font-display text-[16px] font-semibold text-[var(--text-primary)]">
+        {cat.name}
+      </h3>
       <ul className="mt-3 space-y-1.5 text-[13.5px] text-[var(--text-secondary)]">
         {(open ? cat.sub : cat.sub.slice(0, 3)).map((s) => (
           <li key={s} className="flex items-center gap-2">
             <span className="h-1 w-1 rounded-full bg-[color:var(--secondary-jade)]" />
-            <a href="#" className="hover:text-[var(--text-primary)] transition-colors">{s}</a>
+            <a href="#" className="hover:text-[var(--text-primary)] transition-colors">
+              {s}
+            </a>
           </li>
         ))}
       </ul>
@@ -566,12 +698,16 @@ function Projects() {
             className="hover-spot card-border rounded-2xl bg-[rgba(22,31,48,0.55)] p-5 backdrop-blur-md cursor-default"
           >
             <div className="flex items-center justify-between">
-              <h3 className="font-display text-[16px] font-semibold text-[var(--text-primary)]">{p.name}</h3>
+              <h3 className="font-display text-[16px] font-semibold text-[var(--text-primary)]">
+                {p.name}
+              </h3>
               <span className="rounded-full border border-[color:var(--accent-amber)]/40 px-2 py-0.5 text-[10px] uppercase tracking-wider text-[color:var(--accent-amber)]">
                 Em breve
               </span>
             </div>
-            <p className="mt-2 text-[13.5px] text-[var(--text-secondary)] leading-relaxed">{p.desc}</p>
+            <p className="mt-2 text-[13.5px] text-[var(--text-secondary)] leading-relaxed">
+              {p.desc}
+            </p>
           </div>
         ))}
       </div>
@@ -624,33 +760,59 @@ function Footer() {
         <div className="footer-links">
           <ul className="flex flex-wrap gap-x-6 gap-y-2 text-[13px] text-[var(--text-secondary)]">
             <li>
-              <a href="#" className="transition-colors hover:text-[var(--text-primary)]">Sobre</a>
+              <a href="#" className="transition-colors hover:text-[var(--text-primary)]">
+                Sobre
+              </a>
             </li>
             <li>
-              <Link to="/contato" className="transition-colors hover:text-[var(--text-primary)]">Contato</Link>
+              <Link to="/contato" className="transition-colors hover:text-[var(--text-primary)]">
+                Contato
+              </Link>
             </li>
             <li>
-              <Link to="/politica-de-privacidade" className="transition-colors hover:text-[var(--text-primary)]">Política de Privacidade</Link>
+              <Link
+                to="/politica-de-privacidade"
+                className="transition-colors hover:text-[var(--text-primary)]"
+              >
+                Política de Privacidade
+              </Link>
             </li>
             <li>
-              <a href="#" className="transition-colors hover:text-[var(--text-primary)]">Termos de Uso</a>
+              <a href="#" className="transition-colors hover:text-[var(--text-primary)]">
+                Termos de Uso
+              </a>
             </li>
           </ul>
         </div>
         <div className="footer-social">
           <ul className="flex flex-col gap-2 text-[13px] text-[var(--text-secondary)]">
             <li>
-              <a href="https://github.com/michel-freitas" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[var(--text-primary)]">
+              <a
+                href="https://github.com/michel-freitas"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-[var(--text-primary)]"
+              >
                 GitHub — Michel Freitas Dev
               </a>
             </li>
             <li>
-              <a href="https://linkedin.com/in/michel-freitas-dev" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[var(--text-primary)]">
+              <a
+                href="https://linkedin.com/in/michel-freitas-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-[var(--text-primary)]"
+              >
                 LinkedIn — Michel Freitas Dev
               </a>
             </li>
             <li>
-              <a href="https://tiktok.com/@digitaltech00" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[var(--text-primary)]">
+              <a
+                href="https://tiktok.com/@digitaltech00"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-[var(--text-primary)]"
+              >
                 TikTok — DigitalTech
               </a>
             </li>
