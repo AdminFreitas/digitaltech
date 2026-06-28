@@ -667,7 +667,6 @@ function Footer() {
 function Home() {
   return (
     <div className="min-h-screen">
-      <Header />
       <main>
         <Hero />
         <Tools />
@@ -676,7 +675,6 @@ function Home() {
         <Projects />
         <FAQ />
       </main>
-      <Footer />
       <CookieBanner />
     </div>
   );
