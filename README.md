@@ -1,47 +1,79 @@
 # DigitalTech — Tecnologia em um Minuto
 
 Portal brasileiro de tecnologia com foco em IA, programação,
-banco de dados, desenvolvimento web, cibersegurança e carreira em TI.
+banco de dados, cibersegurança e carreira em TI.
 
-## Tecnologias utilizadas
+🌐 **[digitaltech.digital](https://digitaltech.digital)**
 
-- React 18 + TypeScript
-- Vite (build tool)
-- Tailwind CSS
-- Shadcn/ui (componentes)
-- React Router DOM (navegação SPA)
-- Hospedagem: GitHub Pages + Cloudflare
-- Domínio: https://digitaltech.digital
+## Stack
 
-## Arquitetura
+| Camada | Tecnologia |
+|---|---|
+| Framework UI | React 19 + TypeScript |
+| Roteamento | TanStack Router v1 |
+| Framework | TanStack Start + Nitro |
+| Estado assíncrono | TanStack Query v5 |
+| Estilização | Tailwind CSS v4 |
+| Componentes | shadcn/ui (Radix UI) |
+| Build | Vite 8 |
+| Deploy | GitHub Pages + GitHub Actions |
+| DNS / CDN | Cloudflare |
 
-Single Page Application (SPA) com roteamento client-side via
-React Router. Estilização via Tailwind CSS com design system
-customizado (tokens de cor, tipografia e espaçamento próprios).
+## Design system
 
-## Design System
+| Token | Valor | Uso |
+|---|---|---|
+| `--primary-cyan` | `#00D4FF` | Cor principal |
+| `--primary-jade` | `#3DDC97` | Cor secundária |
+| `--accent-amber` | `#E8B86D` | Destaque |
+| `--bg-primary` | `#0B1020` | Fundo |
+| `--text-primary` | `#F1F5F9` | Texto principal |
+| `--text-secondary` | `#94A3B8` | Texto secundário |
 
-- Primária (ciano): #00D4FF
-- Secundária (jade): #3DDC97
-- Accent (âmbar): #E8B86D
-- Background: #0B1020
-- Fontes: Space Grotesk, Inter, JetBrains Mono
+**Fontes:** Space Grotesk · Inter · Plus Jakarta Sans
 
-## Como rodar localmente
+## Estrutura
+
+```
+src/
+├── components/      # Header, Footer e componentes shadcn/ui
+├── lib/             # Utilitários internos
+├── routes/          # Páginas (file-based routing)
+│   ├── __root.tsx   # Layout raiz
+│   ├── index.tsx    # Página inicial
+│   ├── artigos/     # Blog — listagem e artigos individuais
+│   ├── categorias/  # Filtro por categoria
+│   ├── ferramentas/ # Ferramentas recomendadas
+│   └── contato.tsx  # Contato
+├── router.tsx       # Configuração do roteador
+└── styles.css       # Estilos globais e tokens
+```
+
+## Rodando localmente
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Como fazer build para produção
+Acesse: http://localhost:3000
+
+## Build para produção
 
 ```bash
 npm run build
+npm run preview
 ```
+
+## Deploy
+
+Deploy automático via GitHub Actions na branch `principal`.
+Cada push aciona `.github/workflows/static.yml`,
+que executa o build e publica no GitHub Pages.
 
 ## Autor
 
-Michel Freitas
-GitHub: https://github.com/AdminFreitas
-LinkedIn: https://www.linkedin.com/in/michelfreitas-ads
+**Michel Freitas** — Estudante de Análise e Desenvolvimento de Sistemas
+
+- GitHub: [github.com/AdminFreitas](https://github.com/AdminFreitas)
+- LinkedIn: [linkedin.com/in/michelfreitas-ads](https://www.linkedin.com/in/michelfreitas-ads)
