@@ -1,0 +1,139 @@
+/*
+ * prose-digitaltech.css
+ * Estilos para o conteúdo HTML gerado pelo Markdown dos artigos.
+ *
+ * COMO USAR: importe este arquivo no styles.css principal:
+ *   @import "./prose-digitaltech.css";
+ */
+
+.prose-digitaltech {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.prose-digitaltech h2 {
+  color: var(--text-primary);
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-digitaltech h3 {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-digitaltech p {
+  margin-bottom: 1.25rem;
+}
+
+.prose-digitaltech strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.prose-digitaltech a {
+  color: var(--primary-cyan);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose-digitaltech a:hover {
+  opacity: 0.8;
+}
+
+.prose-digitaltech code {
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  border-radius: 4px;
+  color: var(--primary-cyan);
+  font-family: "Fira Code", "Cascadia Code", monospace;
+  font-size: 0.85em;
+  padding: 0.15em 0.4em;
+}
+
+.prose-digitaltech pre {
+  background: rgba(11, 16, 32, 0.8);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  padding: 1.25rem 1.5rem;
+}
+
+.prose-digitaltech pre code {
+  background: none;
+  border: none;
+  color: #e2e8f0;
+  font-size: 0.88rem;
+  padding: 0;
+}
+
+.prose-digitaltech ul,
+.prose-digitaltech ol {
+  margin: 1rem 0 1.25rem 1.5rem;
+}
+
+.prose-digitaltech li {
+  margin-bottom: 0.4rem;
+}
+
+.prose-digitaltech ul li {
+  list-style-type: disc;
+}
+
+.prose-digitaltech ol li {
+  list-style-type: decimal;
+}
+
+/* Checkbox lists gerados pelo Markdown [ ] e [x] */
+.prose-digitaltech ul li input[type="checkbox"] {
+  accent-color: var(--primary-cyan);
+  margin-right: 0.5rem;
+}
+
+.prose-digitaltech blockquote {
+  border-left: 3px solid var(--primary-cyan);
+  color: var(--text-secondary);
+  font-style: italic;
+  margin: 1.5rem 0;
+  padding-left: 1.25rem;
+}
+
+.prose-digitaltech hr {
+  border: none;
+  border-top: 1px solid var(--glass-border);
+  margin: 2rem 0;
+}
+
+.prose-digitaltech table {
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.prose-digitaltech th {
+  background: rgba(0, 212, 255, 0.06);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  text-align: left;
+}
+
+.prose-digitaltech td {
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  padding: 0.55rem 1rem;
+}
+
+.prose-digitaltech tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}

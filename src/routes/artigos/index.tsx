@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { listarArtigos, formatarData } from "../../lib/content";
 
 export const Route = createFileRoute("/artigos/")({
   head: () => ({
@@ -14,59 +15,9 @@ export const Route = createFileRoute("/artigos/")({
   component: ArtigosPage,
 });
 
-const artigos = [
-  {
-    slug: "modelos-de-linguagem-2026",
-    category: "Inteligência Artificial",
-    title: "Como modelos de linguagem mudaram o desenvolvimento em 2026",
-    excerpt:
-      "Um balanço prático sobre produtividade, riscos e o que ficou para trás depois da virada generativa.",
-    readTime: "8 min",
-    date: "24 jun 2026",
-  },
-  {
-    slug: "padroes-assincronos-python",
-    category: "Engenharia de Software",
-    title: "Padrões assíncronos que todo back-end Python deveria usar",
-    excerpt: "Do asyncio cru ao TaskGroup — o que finalmente virou idiomático em 2026.",
-    readTime: "6 min",
-    date: "22 jun 2026",
-  },
-  {
-    slug: "owasp-top10-frontend-2026",
-    category: "Cibersegurança",
-    title: "OWASP Top 10: o que mudou no front-end em 2026",
-    excerpt: "Os ataques do ano, com exemplos reais e mitigação aplicada.",
-    readTime: "9 min",
-    date: "20 jun 2026",
-  },
-  {
-    slug: "postgresql-17-upgrade",
-    category: "Dados",
-    title: "PostgreSQL 17: o que vale apertar o botão de upgrade",
-    excerpt: "Recursos novos que importam na operação e os que não importam.",
-    readTime: "4 min",
-    date: "20 jun 2026",
-  },
-  {
-    slug: "saindo-do-junior",
-    category: "Carreira",
-    title: "Saindo do júnior: as habilidades que ninguém te ensina",
-    excerpt: "Comunicação, escopo, leitura de código alheio e dizer não.",
-    readTime: "6 min",
-    date: "18 jun 2026",
-  },
-  {
-    slug: "workers-edge-backend",
-    category: "Cloud & DevOps",
-    title: "Workers, Edge e o fim do back-end em uma única região",
-    excerpt: "Latência, custo e arquitetura — o que muda na prática.",
-    readTime: "5 min",
-    date: "15 jun 2026",
-  },
-];
-
 function ArtigosPage() {
+  const artigos = listarArtigos();
+
   return (
     <div className="mx-auto max-w-6xl px-6 pt-28 pb-24">
       <div className="text-[11px] uppercase tracking-[0.22em] text-[var(--text-secondary)]">
@@ -76,7 +27,7 @@ function ArtigosPage() {
         Todos os artigos
       </h1>
       <p className="mt-3 text-[15px] text-[var(--text-secondary)]">
-        {artigos.length} artigos publicados
+        {artigos.length} artigo{artigos.length !== 1 ? "s" : ""} publicado{artigos.length !== 1 ? "s" : ""}
       </p>
       <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {artigos.map((a) => (
@@ -95,7 +46,7 @@ function ArtigosPage() {
               {a.excerpt}
             </p>
             <div className="mt-4 flex items-center gap-3 text-[12px] text-[var(--text-secondary)]">
-              <time>{a.date}</time>
+              <time dateTime={a.date}>{formatarData(a.date)}</time>
               <span className="h-1 w-1 rounded-full bg-[var(--text-secondary)]/40" />
               <span>{a.readTime} de leitura</span>
             </div>
